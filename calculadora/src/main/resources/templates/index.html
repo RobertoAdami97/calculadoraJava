@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <style>
+        form {
+            display: block;
+            text-align: center;
+        }
+
+        div {
+            display: block;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+    </style>
+
+    <form action="/calcula" method="POST">
+        <h1>Calculadora Spring Boot</h1>
+        <input type="text" name="numero1" id="numero1" />
+        <select name="operador">
+            <option value="+" >(+)</option>
+            <option value="-" >(-)</option>
+            <option value="*" >(*)</option>
+            <option value="/" >(/)</option>
+        </select>
+        <input type="text" name="numero2" id="numero2" />
+        <input type="submit" value="Calcular" />
+    </form>
+    <div th:text="${mensagem}"></div>
+</body>
+</html>
